@@ -16,7 +16,7 @@ jobs:
       uses: AudreyBudryte2/security-headers@v2
 
       with:
-       name-of-user : 'https://google.com'
+       url: 'https://google.com'
        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Comment a pull_request
