@@ -13,7 +13,7 @@ jobs:
   steps:
     - name : First GitHub Custom Action 
       id : headerscheck
-      uses: AudreyBudryte2/headers@v21
+      uses: AudreyBudryte2/security-headers@v2
 
       with:
        name-of-user : 'https://google.com'
