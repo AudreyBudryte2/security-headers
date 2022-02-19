@@ -15,7 +15,7 @@ jobs:
       id : headerscheck
       uses: AudreyBudryte2/security-headers@v2
       with:
-       url: 'https://google.com'
+       url: 'https://wrongurl.comtest'
        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Comment results of security headers check
