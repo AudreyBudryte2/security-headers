@@ -11,15 +11,14 @@ jobs:
   name : Check headers for violations of security best practises
   
   steps:
-    - name : First GitHub Custom Action 
+    - name : Security headers check
       id : headerscheck
       uses: AudreyBudryte2/security-headers@v2
-
       with:
        url: 'https://google.com'
        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Comment a pull_request
+    - name: Comment results of security headers check
       uses: mb2dev/github-action-comment-pull-request@1.0.0
       with:
         message: "${{steps.headerscheck.outputs.header-issues}}"
