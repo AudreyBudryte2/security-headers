@@ -10,8 +10,3 @@ async function start(){
 }
 
 start();
-
-
-
-
-
