@@ -1,0 +1,26 @@
+name: security-headers-check
+on:
+  pull_request:
+    types: [opened]
+
+jobs: 
+ security-headers-check:
+ 
+  runs-on : ubuntu-latest
+  
+  name : Check headers for violations of security best practises
+  
+  steps:
+    - name : First GitHub Custom Action 
+      id : headerscheck
+      uses: AudreyBudryte2/headers@v21
+
+      with:
+       name-of-user : 'https://google.com'
+       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Comment a pull_request
+      uses: mb2dev/github-action-comment-pull-request@1.0.0
+      with:
+        message: "${{steps.headerscheck.outputs.header-issues}}"
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
