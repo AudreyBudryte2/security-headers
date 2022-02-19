@@ -35,4 +35,3 @@ async function start(targetUrl){
     console.log(comment);
     core.setOutput("header-issues", comment); 
 }
-
