@@ -5,19 +5,18 @@ Utilising the [check-my-headers library](https://github.com/UlisesGascon/check-m
 
 ## Locally
 ### Install
-Clone the repo and run an npm install:
+Install npm package:
 
-    git clone git@github.com:AudreyBudryte2/security-headers.git
-    npm install -g .
+    npm install -g quick-security-headers-check
 
 ### Running
 Once installed, checks can be made for headers of any URL with the following command:
 
-    headers https://<VALID_URL>
+    headers-check https://<VALID_URL>
 ### Removing
 To uninstall: 
 
-    npm uninstall -g headers
+    npm uninstall -g quick-security-headers-check
 
 
 ## CI / GitHub Action
