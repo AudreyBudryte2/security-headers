@@ -15,7 +15,6 @@ try{
     core.setFailed(error.message);
 }
 
-
 // Calls on helpers.js functions, and creates a PR comment for GitHub
 async function start(targetUrl){
     checkUrl(targetUrl);
@@ -36,4 +35,3 @@ async function start(targetUrl){
     console.log(comment);
     core.setOutput("header-issues", comment); 
 }
-
